@@ -1,6 +1,4 @@
 # Advanced SQL Techniques
----
-**Introduction:**
 This file covers some SQL techniques I use specifically in different inventory management systems. These examples will help you optimize queries, improve database performance, and access cool analytical capabilities.
 
 **Contents:**
