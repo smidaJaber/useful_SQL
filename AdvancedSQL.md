@@ -2,18 +2,18 @@
 This file covers some SQL techniques I use specifically in different inventory management systems. These examples will help you optimize queries, improve database performance, and access cool analytical capabilities.
 
 **Contents:**
-1. Window Functions
-2. Common Table Expressions (CTEs)
-3. Recursive Queries
-4. Indexing Strategies
-5. Partitioning Data
-6. JSON Handling in SQL
-7. Temporal Tables
-8. Advanced Joins
+1. [Window Functions](#1-window-functions)
+2. [Common Table Expressions (CTEs)](#2-ctes)
+3. [Recursive Queries](#3-recursive)
+4. [Indexing Strategies](#4-indexing)
+5. [Partitioning Data/tables](#5-partitioning)
+6. [Handling JSON data](#6-json)
+7. [Temporal Tables](#7-temporal-tables)
+8. [Joins](#8-joins)
 
 ---
 
-## 1. Window Functions
+## 1. [Window Functions](#1-window-functions)
 
 Perform calculations across a set of rows related to the current row, useful for analysis.
 
@@ -28,7 +28,7 @@ FROM
     sales;
 ```
 
-## 2. Common Table Expressions (CTEs)
+## 2. [Common Table Expressions (CTEs)](#2-ctes)
 
 Improve the readability of complex queries.
 
@@ -62,7 +62,7 @@ JOIN
     Sales sa ON s.product_id = sa.product_id;
 ```
 
-## 3. Recursive Queries
+## 3. [Recursive Queries](#3-recursive)
 
 Hierarchical data querying, useful for modeling supply chains.
 
@@ -95,7 +95,7 @@ FROM
     ProductComponents;
 ```
 
-## 4. Indexing Strategies
+## 4. [Indexing](#4-indexing)
 
 improves query performance, useful for frequently queried cols
 
@@ -104,7 +104,7 @@ CREATE INDEX idx_product_name ON products (name);
 CREATE INDEX idx_sales_date ON sales (sale_date);
 ```
 
-## 5. Partitioning table
+## 5. [Partitioning table](#5-partitioning)
 
 Partitioning tables improves performance and manageability, useful for large-scale tables/Dbs.
 
@@ -122,7 +122,7 @@ CREATE TABLE sales (
 );
 ```
 
-## 6. JSON Handling in SQL
+## 6. [JSON Handling](#6-json)
 
 Handling JSON data 🤷‍♂️
 
@@ -138,7 +138,7 @@ WHERE
     product_data->>'category' = 'Electronics';
 ```
 
-## 7. Temporal Tables
+## 7. [Temporal Tables](#7-temporal-tables)
 
 Track historical changes, useful for audits and versioning.
 
@@ -151,7 +151,7 @@ CREATE TABLE inventory_history (
 ) WITH SYSTEM VERSIONING;
 ```
 
-## 8. Joins
+## 8. [Joins](#8-joins)
 
 combining and integrating information.
 
